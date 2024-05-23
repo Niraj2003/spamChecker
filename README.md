@@ -63,10 +63,9 @@ Open your web browser and navigate to http://127.0.0.1:8000 to ensure the server
 # API Endpoints Documentation
 
 ## User Registration
-### Endpoint: `/api/register/`
-**Method:** `POST`
-
-**Payload:**
+**Endpoint:** `/api/register/` <br>
+**Method:** `POST` <br>
+**Request:**
 ```json
 {
     "name": "Niraj",
@@ -75,41 +74,61 @@ Open your web browser and navigate to http://127.0.0.1:8000 to ensure the server
     "password": "password"
 }
 ```
+**Response:**
+```json
+{
+    "name": "Niraj",
+    "phone_number": "9960641238",
+    "email": "nirajamr03@gmail.com",
+}
+```
 
 ## User Login
-### Endpoint: `/api/login/`
-**Method:** `POST`
-
-**Payload:**
+**Endpoint:** `/api/login/` <br>
+**Method:** `POST` <br>
+**Request:**
 ```json
 {
     "phone_number": "9960641238",
     "password": "password"
 }
 ```
+**Response:**
+```json
+{
+    "name": "Niraj",
+    "phone_number": "9960641238",
+    "email": "nirajamr03@gmail.com",
+}
+```
 
 ## Mark Spam
-### Endpoint: `/api/spam/`
-**Method:** `POST` 
-
-**Authentication**: Yes
-
-**Payload:**
+**Endpoint:** `/api/spam/` <br>
+**Method:** `POST` <br>
+**Authentication**: Yes <br>
+**Request:**
 ```json
 {
     "phone_number": "4895631786"
 }
 ```
+**Response:**
+```json
+{
+    "phone_number": "4895631786",
+    "spam_count": 1
+}
+```
 
 ## Search Contacts
-### Endpoint: `/api/search/`
+**Endpoint:** `/api/search/type=<type>&query<query>` <br>
 **Authentication:** Yes  
-**Method:** `GET`
-
+**Method:** `GET` <br>
 **Parameters:**
 
 | Key   | Value                  | Examples             |
 |-------|------------------------|----------------------|
 | type  | `name` or `phone_number`| "name" or "phone_number" |
 | query | `search_term`          | "Nir" or "99"         |
+
 
